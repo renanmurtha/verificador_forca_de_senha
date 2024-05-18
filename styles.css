@@ -32,7 +32,7 @@ h2 {
     width: 400px;
 }
 
-input[type="password"] {
+input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -68,4 +68,13 @@ input[type="password"] {
     font-size: 0.8rem;
     max-width: 70%;
     margin: 0 auto 10px;
+}
+
+.icon-rtl {
+    position: absolute;
+    margin: 8px;
+    margin-left: -30px;
+    outline: none;
+    padding: 20px 8px 8px 2px;
+    transition: 0.3s;
 }

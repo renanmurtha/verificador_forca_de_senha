@@ -46,3 +46,15 @@ passwordInput.addEventListener("input", function () {
     strengthIndicator.style.backgroundColor = `${color[score]}`;
     text.style.color = color[score];
 });
+
+
+$(function ($) {
+    var $senha = $("#passwordInput");
+    $("#display").on('mouseup mousedown', function (e) {
+        if ($senha.attr('type') == 'password') {
+            $senha.attr("type", "text");
+        } else {
+            $senha.attr('type', 'password');
+        }
+    });
+});

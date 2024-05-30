@@ -47,14 +47,14 @@ passwordInput.addEventListener("input", function () {
     text.style.color = color[score];
 });
 
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#passwordInput");
 
-$(function ($) {
-    var $senha = $("#passwordInput");
-    $("#display").on('mouseup mousedown', function (e) {
-        if ($senha.attr('type') == 'password') {
-            $senha.attr("type", "text");
-        } else {
-            $senha.attr('type', 'password');
-        }
-    });
+togglePassword.addEventListener("click", function () {
+    const type = password.type === "password" ? "text" : "password";
+
+    password.type = type;
+
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
 });

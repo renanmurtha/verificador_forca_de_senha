@@ -1,4 +1,5 @@
 const passwordInput = document.querySelector("#passwordInput");
+const togglePassword = document.querySelector("#togglePassword");
 let text = document.getElementById("password-strength-text");
 
 passwordInput.addEventListener("input", function () {
@@ -47,13 +48,11 @@ passwordInput.addEventListener("input", function () {
     text.style.color = color[score];
 });
 
-const togglePassword = document.querySelector("#togglePassword");
-const password = document.querySelector("#passwordInput");
+
 
 togglePassword.addEventListener("click", function () {
-    const type = password.type === "password" ? "text" : "password";
-
-    password.type = type;
+    const type = passwordInput.type === "password" ? "text" : "password";
+    passwordInput.type = type;
 
     this.classList.toggle("fa-eye");
     this.classList.toggle("fa-eye-slash");
